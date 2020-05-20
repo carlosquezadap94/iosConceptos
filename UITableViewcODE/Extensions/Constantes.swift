@@ -9,10 +9,10 @@
 import UIKit
 
 struct Images {
-    static let ninety = UIImage(named: "batman")
+    static let batman = UIImage(named: "batman")
     static let captain = UIImage(named: "captain-america")
     static let donatello = UIImage(named: "donatello")
     static let pinguino = UIImage(named: "pinguino")
-    static let raise = UIImage(named: "ciclope")
-    static let shake = UIImage(named: "brutus")
+    static let ciclope = UIImage(named: "ciclope")
+    static let brutus = UIImage(named: "brutus")
 }
