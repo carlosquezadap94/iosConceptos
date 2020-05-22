@@ -113,12 +113,14 @@ class MainViewController: UIViewController {
     @objc func buttonAction(sender: UIButton!) {
         let btnsendtag: UIButton = sender
         if btnsendtag.tag == 1 {
-            let newViewController = ViewController()
-            self.navigationController?.pushViewController(newViewController, animated: true)
+            self.navigationController?.pushViewController(ViewController(), animated: true)
         }
         else if btnsendtag.tag == 2 {
-                   let newViewController = ViewController()
-                   self.navigationController?.pushViewController(newViewController, animated: true)
+            
+                let view = CalculatorViewController(nibName: "CalculatorViewController", bundle: nil)
+            
+                self.navigationController?.pushViewController(view, animated: true)
+
         }
     }
     

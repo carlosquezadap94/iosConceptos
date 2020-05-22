@@ -68,7 +68,6 @@ class VideoCell: UITableViewCell {
         videoTitleLabel.topAnchor.constraint(equalTo: topAnchor,constant: 10).isActive = true
         videoTitleLabel.leadingAnchor.constraint(equalTo: videoImageView.trailingAnchor, constant: 20).isActive = true
         videoTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
-        videoTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
     }
     

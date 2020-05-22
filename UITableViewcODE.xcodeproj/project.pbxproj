@@ -19,6 +19,9 @@
 		80C388FC24743BCB00FCE28F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80C388FA24743BCB00FCE28F /* LaunchScreen.storyboard */; };
 		80C3890A247493B700FCE28F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80C38909247493B700FCE28F /* Default-568h@2x.png */; };
 		80C3890D247493F900FCE28F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3890C247493F900FCE28F /* UIViewExtension.swift */; };
+		80FF1BA8247820F600516A04 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FF1BA7247820F600516A04 /* Colors.xcassets */; };
+		80FF1BAB247825EF00516A04 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FF1BA9247825EF00516A04 /* CalculatorViewController.swift */; };
+		80FF1BAC247825EF00516A04 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80FF1BAA247825EF00516A04 /* CalculatorViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		80C388FD24743BCB00FCE28F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80C38909247493B700FCE28F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		80C3890C247493F900FCE28F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		80FF1BA7247820F600516A04 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		80FF1BA9247825EF00516A04 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		80FF1BAA247825EF00516A04 /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				80C388F824743BCB00FCE28F /* Assets.xcassets */,
+				80FF1BA7247820F600516A04 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -169,6 +176,8 @@
 		80FF1BA224781DEB00516A04 /* calculator */ = {
 			isa = PBXGroup;
 			children = (
+				80FF1BA9247825EF00516A04 /* CalculatorViewController.swift */,
+				80FF1BAA247825EF00516A04 /* CalculatorViewController.xib */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
@@ -231,9 +240,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80FF1BA8247820F600516A04 /* Colors.xcassets in Resources */,
 				80C388FC24743BCB00FCE28F /* LaunchScreen.storyboard in Resources */,
 				80C388F924743BCB00FCE28F /* Assets.xcassets in Resources */,
 				80C3890A247493B700FCE28F /* Default-568h@2x.png in Resources */,
+				80FF1BAC247825EF00516A04 /* CalculatorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80FF1BAB247825EF00516A04 /* CalculatorViewController.swift in Sources */,
 				800C2C0F247580C9009FAE59 /* VideoCell.swift in Sources */,
 				800C2C1124758ADC009FAE59 /* Constantes.swift in Sources */,
 				80C388F424743BC800FCE28F /* ViewController.swift in Sources */,
