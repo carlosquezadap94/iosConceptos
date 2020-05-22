@@ -13,17 +13,20 @@ class VideoCell: UITableViewCell {
 
     var videoImageView = UIImageView()
     var videoTitleLabel = UILabel()
+    var videoSubTitleLabel = UILabel()
     
    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style:style,reuseIdentifier:reuseIdentifier)
         addSubview(videoImageView)
         addSubview(videoTitleLabel)
+        addSubview(videoSubTitleLabel)
     
         configureImageView()
         configureLabel()
         setImageConstrains()
         setLabelConstrains()
+        setSubLabelConstrains()
     }
     
     required init?(coder: NSCoder) {
@@ -31,8 +34,11 @@ class VideoCell: UITableViewCell {
     }
     
     func set(video:Video){
-        videoImageView.image = video.image
-        videoTitleLabel.text = video.title
+        videoImageView.image                            = video.image
+        videoTitleLabel.text                            = video.title
+        videoSubTitleLabel.text                         = video.subtitle
+        videoTitleLabel.font                            = UIFont(name: "Helvetica", size: 16)
+        videoSubTitleLabel.font                         = UIFont(name: "Helvetica-Light", size: 12)
     }
     
     private func configureImageView(){
@@ -44,22 +50,33 @@ class VideoCell: UITableViewCell {
     private func configureLabel(){
         videoTitleLabel.numberOfLines = 0
         videoTitleLabel.adjustsFontSizeToFitWidth = true
+        videoSubTitleLabel.numberOfLines = 0
+        videoSubTitleLabel.adjustsFontSizeToFitWidth = true
     }
     
     private func setImageConstrains(){
         videoImageView.translatesAutoresizingMaskIntoConstraints = false
         videoImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         videoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
-        videoImageView.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        videoImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        videoImageView.topAnchor.constraint(equalTo:topAnchor,constant: 20).isActive = true
         videoImageView.widthAnchor.constraint(equalTo: videoImageView.heightAnchor, multiplier: 1/1).isActive = true
     }
     
     private func setLabelConstrains(){
         videoTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        videoTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        videoTitleLabel.topAnchor.constraint(equalTo: topAnchor,constant: 10).isActive = true
         videoTitleLabel.leadingAnchor.constraint(equalTo: videoImageView.trailingAnchor, constant: 20).isActive = true
-        videoTitleLabel.heightAnchor.constraint(equalToConstant: 80).isActive = true
         videoTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
+        videoTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        
+    }
+    
+    private func setSubLabelConstrains(){
+        videoSubTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        videoSubTitleLabel.topAnchor.constraint(equalTo: videoTitleLabel.bottomAnchor).isActive = true
+        videoSubTitleLabel.leadingAnchor.constraint(equalTo: videoImageView.trailingAnchor, constant: 20).isActive = true
+        videoSubTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
     }
 
 }

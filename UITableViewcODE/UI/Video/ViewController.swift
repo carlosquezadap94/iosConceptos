@@ -60,13 +60,12 @@ extension ViewController:UITableViewDelegate,  UITableViewDataSource
 
 extension ViewController{
     func fetchData()-> [Video]{
-        let video1 = Video(image: Images.captain!, title: "Capitan")
-        let video2 = Video(image: Images.donatello!, title: "donatello")
-        let video3 = Video(image: Images.pinguino!, title: "pinguino")
-        let video4 = Video(image: Images.batman!, title: "batman")
-        let video5 = Video(image: Images.brutus!, title: "brutus")
-        let video6 = Video(image: Images.ciclope!, title: "ciclope")
-        
+        let video1 = Video(image: Images.captain!, title: "Capitan",subtitle: "el capitan campeon")
+        let video2 = Video(image: Images.donatello!, title: "donatello",subtitle: "el tortuguiento")
+        let video3 = Video(image: Images.pinguino!, title: "pinguino",subtitle: "Vieja Guardia")
+        let video4 = Video(image: Images.batman!, title: "batman",subtitle: "The power")
+        let video5 = Video(image: Images.brutus!, title: "brutus",subtitle: "Olivia")
+        let video6 = Video(image: Images.ciclope!, title: "ciclope",subtitle: "Gay")
         return [video1,video2,video3,video4,video5,video6]
     }
 }
